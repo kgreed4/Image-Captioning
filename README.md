@@ -13,7 +13,8 @@ We use the Flickr8k dataset, which comprises 8,000 images each paired with five 
 ### Model Architecture
 
 - **Encoder**: Utilizes ResNet50 to extract a 2048-dimensional feature vector from input images.
-- **Decoder**: An LSTM-based RNN that generates captions from the encoded image features. It incorporates Bahdanau attention to enhance focus on pertinent parts of the image.
+- **Decoder**: An LSTM-based RNN that generates captions from the encoded image features.
+- **Attention**: Bahdanau attention to enhance focus on pertinent parts of the image when decoding.
 
 ### Training and Evaluation
 
@@ -24,6 +25,8 @@ The model is trained using cross-entropy loss with an Adam optimizer. We evaluat
 Our experiments show that the attention mechanism significantly improves the performance of the image captioning model, allowing it to generate more accurate and contextually relevant captions.
 
 ![results_image](assets/results.png)
+
+![attention_image](assets/attention.png)
 
 ## Contribution
 
